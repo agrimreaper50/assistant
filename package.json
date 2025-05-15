@@ -1,0 +1,41 @@
+{
+  "name": "smart-assistant",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "@notionhq/client": "^3.0.1",
+    "@shadcn/ui": "^0.0.4",
+    "@tailwindcss/postcss": "^4.1.6",
+    "googleapis": "^148.0.0",
+    "ioredis": "^5.6.1",
+    "lucide-react": "^0.509.0",
+    "next": "15.3.2",
+    "next-auth": "^4.24.11",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5"
+  },
+  "description": "This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
