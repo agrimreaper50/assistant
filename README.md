@@ -46,3 +46,34 @@ An AI-powered dashboard that summarizes your emails, calendar events, and tasks 
 git clone https://github.com/your-username/smart-assistant.git
 cd smart-assistant
 npm install
+```
+
+---
+
+## Environment Variables Setup
+
+To run this project locally, create a `.env.local` file in the root directory of the project and add the following environment variables:
+
+```env
+# Google OAuth
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+
+# Auth secret
+NEXTAUTH_SECRET=your_nextauth_secret
+
+# URL, same for everyone
+NEXTAUTH_URL=http://localhost:3000
+
+# Gemini API
+GEMINI_API_KEY=your_google_generative_ai_key
+
+# Notion API
+NOTION_TOKEN=your_notion_integration_secret
+NOTION_TASK_DB_ID=your_notion_task_database_id
+
+# Redis
+REDIS_URL=your_redis_connection_url
+```
+> ⚠️ **Be sure your Notion integration has access to the specified database.**  
+> ⚠️ **Gmail and Google Calendar APIs must be enabled in your Google Cloud Console project.**
