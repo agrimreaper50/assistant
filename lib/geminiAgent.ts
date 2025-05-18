@@ -49,3 +49,19 @@ export async function summarizeEmails(emails: Email[]) {
   }
   return summaries
 }
+
+export async function invalidateCache(userEmail: string) {
+  const cacheKeys = [
+    `briefing:${userEmail}`,
+    `plan:${userEmail}`,
+  ]
+  
+  // Delete all cache keys
+  await Promise.all(cacheKeys.map(key => redis.del(key)))
+  
+  // Also delete all email summaries
+  const emailKeys = await redis.keys('summary:*')
+  if (emailKeys.length > 0) {
+    await Promise.all(emailKeys.map(key => redis.del(key)))
+  }
+}
