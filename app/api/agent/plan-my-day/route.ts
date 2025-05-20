@@ -77,7 +77,7 @@ export async function GET() {
   ]
   When creating tasks 10 tasks for a simple 1 task. Example: One unread email and one event should only create one task (unless email content said otherwise).
 
-  If you already have a task in the database (based on the title), don't create a new one. Regardlessly of the priority or if you created it or not.
+  If you already have a task in the database (based on the title), don't create a new one. Regardlessly of the priority or if you created it or not. Also do not create tasks for lunch or exercise.
   Plan:
   ${plan}
   `
